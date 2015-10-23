@@ -50,4 +50,13 @@ public class PhaseRule {
 	public void setPriority(final Integer priority) {
 		this.priority = priority;
 	}
+
+	@Override
+	public String toString() {
+		if (this.priority != null) {
+			return String.format("%s -> %s (#%s)", this.pattern, this.phase, this.priority);
+		} else {
+			return String.format("%s -> %s", this.pattern, this.phase);
+		}
+	}
 }
