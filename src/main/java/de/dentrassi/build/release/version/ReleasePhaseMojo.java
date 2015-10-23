@@ -147,6 +147,8 @@ public class ReleasePhaseMojo extends AbstractMojo {
 
 		final String phase = pe.eval(v);
 
+		getLog().info("The relase phase is: " + phase);
+
 		setProperty("phase", phase);
 	}
 
